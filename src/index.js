@@ -1,7 +1,8 @@
 import dotenv from "dotenv";
 import conncetDB from "./db/index.js";
-
-
+import express from "express";
+const app = express();
+import cors from "cors";
 dotenv.config({
     path:"./env"
 });
