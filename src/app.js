@@ -1,9 +1,10 @@
 import express from "express"
-
+import cors from "cors"
+import cookieParser from "cookie-parser";
 const app = express();
 
-app.get("/",(req,res)=>{
-    res.send("Hello World")
-}  )
 
+app.use(cors({
+    origin: process.env.CLIENT_URL,
+}));
 export default app;
